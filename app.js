@@ -86,15 +86,14 @@ app.post("/contact",function(req, res)
     {
       if(err)
       {
-        res.send("Pls try again!");
+        res.render("tryAgain");
       }
       else
       {
-        res.send("Your Query has been received! Soon we will get in touch with you");
+        res.render("thankYou");
       }
     });
 });
-
 app.listen(3000, function() {
   console.log("Server started on port 3000");
 });
